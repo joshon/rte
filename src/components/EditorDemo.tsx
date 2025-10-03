@@ -74,7 +74,7 @@ export default function EditorDemo({ initialMarkdown = 'Select some text to see 
 
 	return (
 		<div className="relative w-full max-w-2xl bg-black">
-		<div className="relative w-full max-w-2xl bg-white overflow-hidden">
+		<div className="relative w-full max-w-2xl bg-white overflow-hidden rounded-md">
 			<MDXEditor
 				markdown={value}
 				onChange={setValue}
@@ -99,7 +99,10 @@ export default function EditorDemo({ initialMarkdown = 'Select some text to see 
 						autoLoadLanguageSupport: true,
 					}),
 					diffSourcePlugin({ viewMode: 'rich-text' }),
-					toolbarPlugin({ toolbarContents: () => <BubbleToolbar /> }),
+					toolbarPlugin({
+						toolbarContents: () => <BubbleToolbar />,
+						toolbarClassName: 'bg-transparent shadow-none border-0 p-0 m-0 h-0',
+					}),
 				]}
 				className="prose max-w-none"
 			/>

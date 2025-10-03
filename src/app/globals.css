@@ -42,3 +42,13 @@ body {
 .mdxeditor h4 { font-size: 1.125rem; line-height: 1.5rem; font-weight: 700; margin: 0.75rem 0 0.5rem; }
 .mdxeditor h5 { font-size: 1rem; line-height: 1.5rem; font-weight: 700; margin: 0.5rem 0 0.25rem; }
 .mdxeditor h6 { font-size: 0.875rem; line-height: 1.25rem; font-weight: 700; margin: 0.5rem 0 0.25rem; }
+
+/* Hide the built-in top toolbar container; we use a custom floating bubble */
+.mdxeditor [role='toolbar'] {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+}
